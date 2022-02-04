@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+zikasort.py
+zikasort.egg-info/PKG-INFO
+zikasort.egg-info/SOURCES.txt
+zikasort.egg-info/dependency_links.txt
+zikasort.egg-info/entry_points.txt
+zikasort.egg-info/top_level.txt

@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: zikasort
+Version: 0.1
+Summary: Sorter for files
+Home-page: UNKNOWN
+Author: Zika Walter
+Author-email: example@example.com
+License: APACHE
+Keywords: sorter
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+Reorders/reverses/renames files in a folder.
+
+
+Change log 
+
+==========
+
+0.0.1 (03.02.2022)
+-------------------
+- First Release
+
+0.0.2 (03.02.2022)
+-------------------
+- Second Release
+- Configuring the setup file
+
+0.0.3 (03.02.2022)
+-------------------
+- Third Release
+- Configuring the setup file
+
+0.0.4 (03.02.2022)
+-------------------
+- Added main func so it could work, I guess/hope
+
+0.0.5 (03.02.2022)
+-------------------
+- Added command_line file so it could work, I guess/hope
+
+0.0.6 (03.02.2022)
+-------------------
+- Configuring the setup file
+
+0.0.7 (03.02.2022)
+-------------------
+- Configuring the setup file
+
+0.0.8 (03.02.2022)
+-------------------
+- Configuring the setup file
+
+0.0.9 (03.02.2022)
+-------------------
+- It workksss
+
+0.1 (03.02.2022)
+-------------------
+- Usable version :)
+
+

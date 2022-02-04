@@ -23,6 +23,10 @@ class File():
 		# To prevent file already exists error
 		return "a" + self.file
 
+	def remove_a(self):
+		# To prevent file already exists error
+		return self.file[1:]		
+
 	def rename_as(self, old_name, new_name):
 		os.rename(os.path.join(self.folder, self.file), os.path.join(self.folder, new_name))
 		self.file = new_name
@@ -51,10 +55,7 @@ class Sorter():
 			self.files.append(f)
 			file_i += 1
 
-		try:
-			# Securing that new files have different name than the files in a folder 
-			self.add_a_filename()
-	
+		try:	
 			if self.custom_name:
 				self.rename_files_with_name(self.custom_name)
 			
@@ -62,6 +63,8 @@ class Sorter():
 				self.order_files()
 			else:
 				self.reverse_order_files()
+
+			self.remove_a_filename()
 
 		except PermissionError as e:
 			# Handles PermissionErrors
@@ -76,17 +79,24 @@ class Sorter():
 		for file in self.files:
 			file.rename_as(file.file, file.add_a())
 
+	def remove_a_filename(self):
+		# New file can't overwrite the one in a folder
+		for file in self.files:
+			file.rename_as(file.file, file.remove_a())
+
 	def rename_files_with_name(self, name):
 		for file in self.files:
 			file.rename_as(file.file, file.insert_number(name + "." + file.file.split(".")[1]))
 
 	def order_files(self):
 		for file in self.files:
+			file.rename_as(file.file, file.add_a())
 			file.rename_as(file.file, file.insert_number(file.remove_numbers()))
 
 	def reverse_order_files(self):
 		counter = self.file_id
 		for file in reversed(self.files):
+			file.rename_as(file.file, file.add_a())
 			file.rename_as(file.file, file.insert_number(file.remove_numbers()))
 			counter += 1
 
@@ -100,6 +110,7 @@ def set_argparse():
 
 	return parser.parse_args()
 
-if __name__ == "__main__":
+
+def main():
 	# Sets the Argpars and runs the Sorter
 	Sorter(set_argparse())
